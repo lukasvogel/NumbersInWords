@@ -11,6 +11,10 @@ public class WordConstructor {
 			return WordConstructorGerman.constructWord(number);
 		else if (language.contains("English"))
 			return WordConstructorEnglish.constructWord(number);
+		else if (language.contains("Roman Numerals")) {
+			RomanNumeralConstructor rnc = new RomanNumeralConstructor(Integer.valueOf(number));
+			return rnc.assembleNumeral();
+		}
 		else
 			return "Invalid language";
 			

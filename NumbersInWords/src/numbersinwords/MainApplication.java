@@ -25,8 +25,8 @@ public class MainApplication {
 		shell.setText("Numbers in words");	
 		
 		final Combo combo = new Combo(shell, SWT.DROP_DOWN | SWT.READ_ONLY);
-		combo.setBounds(129, 27, 91, 23);
-		combo.setItems(new String[] {"English", "German"});
+		combo.setBounds(129, 27, 214, 23);
+		combo.setItems(new String[] {"English", "German", "Roman Numerals"});
 		combo.select(0);
 		
 		input = new Text(shell, SWT.BORDER);
@@ -35,7 +35,7 @@ public class MainApplication {
 				if (input.getText().matches("[0-9]+")) 
 					output.setText(WordConstructor.constructWord(combo.getText(),input.getText()));
 				else
-					output.setText("This input is no number!");
+					output.setText("This input is no valid number!");
 			}
 		});
 		input.setBounds(129, 68, 214, 21);
